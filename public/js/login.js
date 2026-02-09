@@ -135,10 +135,9 @@ async function mockLogin(email, password, role) {
 function redirectToDashboard(role) {
     // Redirect to appropriate dashboard
     const dashboards = {
-        'serviceprovider': 'provider-dashboard.html',
-        'provider': 'provider-dashboard.html', // Handle both casing if needed
-        'admin': 'admin.html', // OR admin-dashboard.html, assuming admin.html based on previous file lists
-        'user': 'dashboard.html'
+        'serviceprovider': 'services.html',
+        'admin': 'services.html',
+        'user': 'services.html'
     };
 
     window.location.href = dashboards[role] || 'services.html';

@@ -283,76 +283,30 @@ function initializeMap() {
     }, 100);
 }
 
-// Update map markers with real service data
-function updateMapMarkers(services) {
-    if (!map) return;
+function addProviderMarkers() {
+    // Mock provider locations around default center
+    const providers = [
+        { name: "Mike's Plumbing", lat: 40.7128, lng: -74.0060 },
+        { name: "QuickFix Plumbing", lat: 40.7200, lng: -74.0100 },
+        { name: "Pro Plumbing", lat: 40.7050, lng: -74.0000 },
+        { name: "Reliable Plumbers", lat: 40.7300, lng: -73.9900 },
+        { name: "Expert Drain", lat: 40.7150, lng: -74.0200 },
+        { name: "AllDay Plumbing", lat: 40.7250, lng: -73.9800 }
+    ];
 
-    // Clear existing markers
-    markers.forEach(marker => map.removeLayer(marker));
-    markers = [];
+    providers.forEach(provider => {
+        const marker = L.marker([provider.lat, provider.lng]).addTo(map);
 
-    if (services.length === 0) return;
+        const popupContent = `
+            <div style="padding: 5px; text-align: center;">
+                <h3 style="margin: 0 0 5px; font-size: 16px; color: #1e293b;">${provider.name}</h3>
+                <span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: 500;">Verified Provider</span>
+            </div>
+        `;
 
-    // Add markers for each service
-    const bounds = L.latLngBounds();
-
-    services.forEach(service => {
-        // Check if service has location data (supports both structure types or raw coords)
-        let lat, lng, address;
-
-        // Backend might return location as string 'Orikkai, Kanchipuram' or object
-        // To make this work with the map, we need coordinates.
-        // Since we updated the backend to use nominatim, the provider object might not have coords immediately
-        // unless we stored them. 
-
-        // However, the service object has: service.providerId.location.coordinates (GeoJSON [lng, lat])
-        if (service.providerId && service.providerId.location && service.providerId.location.coordinates) {
-            [lng, lat] = service.providerId.location.coordinates;
-            address = service.providerId.location.address || 'Location';
-        }
-        // Fallback for the seed data we just added if it doesn't have coordinates yet
-        // (The seedData I wrote uses strings for location, so we need to mock coords for the demo if real ones aren't there)
-        else if (service.location === 'Orikkai, Kanchipuram') {
-            lat = 12.8226;
-            lng = 79.6953;
-            address = 'Orikkai, Kanchipuram';
-        } else if (service.location === 'Kanchipuram') {
-            lat = 12.8342;
-            lng = 79.7036;
-            address = 'Kanchipuram';
-        } else if (service.location === 'Chennai') {
-            lat = 13.0827;
-            lng = 80.2707;
-            address = 'Chennai';
-        } else if (service.providerId && service.providerId.location) {
-            // Try to parse basic lat/lng if available
-            lat = service.providerId.location.lat;
-            lng = service.providerId.location.lng;
-            address = service.providerId.location.address;
-        }
-
-        if (lat && lng) {
-            const marker = L.marker([lat, lng]).addTo(map);
-            const popupContent = `
-                <div style="padding: 5px; text-align: center;">
-                    <h3 style="margin: 0 0 5px; font-size: 16px; color: #1e293b;">${service.name}</h3>
-                    <p style="margin: 0 0 5px; font-size: 12px; color: #64748b;">${service.category}</p>
-                    <span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: 500;">$${service.pricePerHour}/hr</span>
-                    <br>
-                    <small style="color: #94a3b8; font-size: 11px;">${address}</small>
-                </div>
-            `;
-
-            marker.bindPopup(popupContent);
-            markers.push(marker);
-            bounds.extend([lat, lng]);
-        }
+        marker.bindPopup(popupContent);
+        markers.push(marker);
     });
-
-    // Fit map to bounds if we have markers
-    if (markers.length > 0) {
-        map.fitBounds(bounds, { padding: [50, 50] });
-    }
 }
 
 // ===================================
