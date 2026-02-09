@@ -100,6 +100,7 @@ function showMessage(form, message, type) {
 // Real API login function
 async function mockLogin(email, password, role) {
     try {
+        console.log(`Attempting login to: ${CONFIG.API_BASE_URL}/auth/login`);
         const response = await fetch(`${CONFIG.API_BASE_URL}/auth/login`, {
             method: 'POST',
             headers: {
@@ -108,19 +109,26 @@ async function mockLogin(email, password, role) {
             body: JSON.stringify({ email, password })
         });
 
-        const data = await response.json();
-
-        if (response.ok) {
-            // Store token and user data
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('user', JSON.stringify(data));
-            return { success: true };
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+            const data = await response.json();
+            if (response.ok) {
+                // Store token and user data
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('user', JSON.stringify(data));
+                return { success: true };
+            } else {
+                return { success: false, message: data.message || 'Login failed' };
+            }
         } else {
-            return { success: false, message: data.message || 'Login failed' };
+            const text = await response.text();
+            console.error('Non-JSON response:', text);
+            return { success: false, message: `Server error: ${response.status} ${response.statusText}` };
         }
+
     } catch (error) {
         console.error('Login API error:', error);
-        return { success: false, message: 'Network error. Please try again.' };
+        return { success: false, message: `Network/Parsing error: ${error.message}` };
     }
 }
 
