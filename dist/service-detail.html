@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike's Plumbing Services - Smart Urban Service Locator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/service_detail-CePljEvD.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-DBi6A-FT.css">
+  <link rel="stylesheet" crossorigin href="/assets/dashboard-B_wDi0l2.css">
+</head>
+
+<body class="service-detail-page">
+    <!-- Navigation Header -->
+    <header class="dashboard-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="header-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <span class="logo-text">Smart Urban</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="header-search">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search for services...">
+                </div>
+            </div>
+
+            <!-- User Menu -->
+            <div class="header-user">
+                <button class="notification-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </button>
+
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=667eea&color=fff" alt="User"
+                        class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">User</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="detail-main">
+        <div class="detail-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="dashboard.html">Home</a>
+                <span class="separator">›</span>
+                <a href="services.html">Plumbers</a>
+                <span class="separator">›</span>
+                <span class="current">Mike's Plumbing Services</span>
+            </nav>
+
+            <!-- Provider Header -->
+            <div class="provider-header-section">
+                <div class="provider-main-info">
+                    <div class="provider-avatar">
+                        <img src="https://ui-avatars.com/api/?name=Mike+Johnson&background=667eea&color=fff&size=120"
+                            alt="Mike Johnson">
+                        <div class="verified-badge-large">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="provider-info">
+                        <h1 class="provider-title">Mike's Plumbing Services</h1>
+                        <p class="provider-tagline">Professional Plumbing Solutions for Your Home</p>
+                        <div class="provider-stats">
+                            <div class="stat-item">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">4.9</span>
+                                <span class="stat-label">(127 reviews)</span>
+                            </div>
+                            <div class="stat-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span class="stat-value">2.5 km</span>
+                                <span class="stat-label">away</span>
+                            </div>
+                            <div class="stat-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span class="stat-value">10+</span>
+                                <span class="stat-label">years experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="provider-actions">
+                    <button class="action-btn primary-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Book Now
+                    </button>
+                    <button class="action-btn secondary-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        Call
+                    </button>
+                    <button class="action-btn secondary-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Message
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Photo Gallery -->
+                    <section class="gallery-section">
+                        <h2 class="section-title">Gallery</h2>
+                        <div class="photo-gallery">
+                            <div class="main-photo"
+                                style="background-image: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&h=600&fit=crop');">
+                                <button class="gallery-expand">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <polyline points="9 21 3 21 3 15"></polyline>
+                                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="thumbnail-grid">
+                                <div class="thumbnail"
+                                    style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop');">
+                                </div>
+                                <div class="thumbnail"
+                                    style="background-image: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=400&h=300&fit=crop');">
+                                </div>
+                                <div class="thumbnail"
+                                    style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop');">
+                                </div>
+                                <div class="thumbnail more-photos">
+                                    <span>+5 more</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- About Section -->
+                    <section class="about-section">
+                        <h2 class="section-title">About</h2>
+                        <p class="about-text">
+                            With over 10 years of experience in the plumbing industry, Mike's Plumbing Services has been
+                            serving the community with dedication and expertise. We specialize in residential and
+                            commercial plumbing solutions, from simple repairs to complex installations.
+                        </p>
+                        <p class="about-text">
+                            Our team is fully licensed, insured, and committed to providing top-quality service at
+                            competitive prices. We pride ourselves on our punctuality, professionalism, and attention to
+                            detail. Customer satisfaction is our top priority.
+                        </p>
+                    </section>
+
+                    <!-- Services Offered -->
+                    <section class="services-offered-section">
+                        <h2 class="section-title">Services Offered</h2>
+                        <div class="services-grid">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-details">
+                                    <h3>Pipe Repair & Replacement</h3>
+                                    <p>Expert repair and replacement of all types of pipes</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-details">
+                                    <h3>Leak Detection & Fixing</h3>
+                                    <p>Advanced leak detection and permanent fixes</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-details">
+                                    <h3>Drain Cleaning</h3>
+                                    <p>Professional drain and sewer line cleaning</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-details">
+                                    <h3>Water Heater Installation</h3>
+                                    <p>Installation and repair of water heaters</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-details">
+                                    <h3>Bathroom & Kitchen Plumbing</h3>
+                                    <p>Complete plumbing solutions for bathrooms and kitchens</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-details">
+                                    <h3>Emergency Services</h3>
+                                    <p>24/7 emergency plumbing services available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Reviews Section -->
+                    <section class="reviews-section">
+                        <div class="reviews-header">
+                            <h2 class="section-title">Customer Reviews</h2>
+                            <button class="write-review-btn">Write a Review</button>
+                        </div>
+
+                        <!-- Rating Summary -->
+                        <div class="rating-summary">
+                            <div class="overall-rating">
+                                <div class="rating-number">4.9</div>
+                                <div class="rating-stars-large">⭐⭐⭐⭐⭐</div>
+                                <div class="rating-count">Based on 127 reviews</div>
+                            </div>
+                            <div class="rating-breakdown">
+                                <div class="rating-bar-item">
+                                    <span class="rating-label">5 stars</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 85%"></div>
+                                    </div>
+                                    <span class="rating-percentage">85%</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span class="rating-label">4 stars</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 10%"></div>
+                                    </div>
+                                    <span class="rating-percentage">10%</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span class="rating-label">3 stars</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 3%"></div>
+                                    </div>
+                                    <span class="rating-percentage">3%</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span class="rating-label">2 stars</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 1%"></div>
+                                    </div>
+                                    <span class="rating-percentage">1%</span>
+                                </div>
+                                <div class="rating-bar-item">
+                                    <span class="rating-label">1 star</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 1%"></div>
+                                    </div>
+                                    <span class="rating-percentage">1%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review List -->
+                        <div class="reviews-list">
+                            <!-- Review 1 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Miller&background=3b82f6&color=fff"
+                                        alt="Sarah Miller" class="reviewer-avatar">
+                                    <div class="reviewer-info">
+                                        <h4 class="reviewer-name">Sarah Miller</h4>
+                                        <div class="review-meta">
+                                            <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                                            <span class="review-date">2 days ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    Excellent service! Mike arrived on time and quickly identified the issue with our
+                                    kitchen sink. He was professional, courteous, and completed the repair efficiently.
+                                    Highly recommend!
+                                </p>
+                                <div class="review-footer">
+                                    <button class="helpful-btn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                            </path>
+                                        </svg>
+                                        Helpful (12)
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Review 2 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://ui-avatars.com/api/?name=John+Smith&background=10b981&color=fff"
+                                        alt="John Smith" class="reviewer-avatar">
+                                    <div class="reviewer-info">
+                                        <h4 class="reviewer-name">John Smith</h4>
+                                        <div class="review-meta">
+                                            <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                                            <span class="review-date">1 week ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    Had an emergency leak at 10 PM and Mike responded immediately. Fixed the problem
+                                    within an hour. Fair pricing and great work. Will definitely call again!
+                                </p>
+                                <div class="review-footer">
+                                    <button class="helpful-btn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                            </path>
+                                        </svg>
+                                        Helpful (8)
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Review 3 -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://ui-avatars.com/api/?name=Emily+Davis&background=f59e0b&color=fff"
+                                        alt="Emily Davis" class="reviewer-avatar">
+                                    <div class="reviewer-info">
+                                        <h4 class="reviewer-name">Emily Davis</h4>
+                                        <div class="review-meta">
+                                            <span class="review-stars">⭐⭐⭐⭐</span>
+                                            <span class="review-date">2 weeks ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">
+                                    Very professional and knowledgeable. Installed a new water heater for us and
+                                    explained everything clearly. The only reason for 4 stars instead of 5 is the price
+                                    was a bit higher than expected, but the quality of work was excellent.
+                                </p>
+                                <div class="review-footer">
+                                    <button class="helpful-btn">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                            </path>
+                                        </svg>
+                                        Helpful (5)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="load-more-btn">Load More Reviews</button>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="detail-sidebar">
+                    <!-- Pricing Card -->
+                    <div class="sidebar-card pricing-card">
+                        <h3 class="card-title">Pricing</h3>
+                        <div class="price-display">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-amount">$50<span class="price-unit">/hour</span></span>
+                        </div>
+                        <div class="price-features">
+                            <div class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Free consultation</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Same-day service available</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>90-day warranty</span>
+                            </div>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+
+                    <!-- Availability Card -->
+                    <div class="sidebar-card availability-card">
+                        <h3 class="card-title">Availability</h3>
+                        <div class="availability-list">
+                            <div class="availability-item">
+                                <span class="day">Monday - Friday</span>
+                                <span class="hours">8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="availability-item">
+                                <span class="day">Saturday</span>
+                                <span class="hours">9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="availability-item">
+                                <span class="day">Sunday</span>
+                                <span class="hours">Emergency only</span>
+                            </div>
+                        </div>
+                        <div class="emergency-notice">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <span>24/7 Emergency Service Available</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Card -->
+                    <div class="sidebar-card contact-card">
+                        <h3 class="card-title">Contact Information</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                                <div class="contact-details">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">(555) 123-4567</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">mike@plumbing.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <div class="contact-details">
+                                    <span class="contact-label">Address</span>
+                                    <span class="contact-value">123 Main St, City, State</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Card -->
+                    <div class="sidebar-card certifications-card">
+                        <h3 class="card-title">Certifications & Licenses</h3>
+                        <div class="certifications-list">
+                            <div class="cert-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Licensed Plumber</span>
+                            </div>
+                            <div class="cert-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Insured & Bonded</span>
+                            </div>
+                            <div class="cert-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Background Checked</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/service-detail.js"></script>
+</body>
+
+</html>

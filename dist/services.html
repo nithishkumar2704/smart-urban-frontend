@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbers Near You - Smart Urban Service Locator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/services-BeSCthr2.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-DBi6A-FT.css">
+  <link rel="stylesheet" crossorigin href="/assets/dashboard-B_wDi0l2.css">
+</head>
+
+<body class="services-page">
+    <!-- Navigation Header -->
+    <header class="dashboard-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="header-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <span class="logo-text">Smart Urban</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="header-search">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search for services...">
+                </div>
+            </div>
+
+            <!-- User Menu -->
+            <div class="header-user">
+                <button class="notification-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </button>
+
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=667eea&color=fff" alt="User"
+                        class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">User</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="services-main">
+        <div class="services-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="dashboard.html">Home</a>
+                <span class="separator">›</span>
+                <span class="current">Plumbers</span>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">Plumbers Near You</h1>
+                    <p class="page-subtitle">127 professionals available in your area</p>
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        Grid
+                    </button>
+                    <button class="view-btn" data-view="map">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Map
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Layout -->
+            <div class="content-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filters-header">
+                        <h3>Filters</h3>
+                        <button class="clear-filters">Clear All</button>
+                    </div>
+
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Price Range</h4>
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" class="price-input" id="price-min">
+                            <span class="price-separator">-</span>
+                            <input type="number" placeholder="Max" class="price-input" id="price-max">
+                        </div>
+                        <div class="price-range-slider">
+                            <input type="range" min="0" max="200" value="0" class="range-slider" id="range-min">
+                            <input type="range" min="0" max="200" value="200" class="range-slider" id="range-max">
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Rating</h4>
+                        <div class="rating-options">
+                            <label class="rating-option">
+                                <input type="checkbox" name="rating" value="5">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">5 Stars</span>
+                            </label>
+                            <label class="rating-option">
+                                <input type="checkbox" name="rating" value="4">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">4+ Stars</span>
+                            </label>
+                            <label class="rating-option">
+                                <input type="checkbox" name="rating" value="3">
+                                <span class="stars">⭐⭐⭐</span>
+                                <span class="rating-text">3+ Stars</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Distance Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Distance</h4>
+                        <div class="distance-options">
+                            <label class="distance-option">
+                                <input type="radio" name="distance" value="1">
+                                <span>Within 1 km</span>
+                            </label>
+                            <label class="distance-option">
+                                <input type="radio" name="distance" value="5" checked>
+                                <span>Within 5 km</span>
+                            </label>
+                            <label class="distance-option">
+                                <input type="radio" name="distance" value="10">
+                                <span>Within 10 km</span>
+                            </label>
+                            <label class="distance-option">
+                                <input type="radio" name="distance" value="20">
+                                <span>Within 20 km</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Availability Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Availability</h4>
+                        <div class="availability-options">
+                            <label class="availability-option">
+                                <input type="checkbox" name="availability" value="today">
+                                <span>Available Today</span>
+                            </label>
+                            <label class="availability-option">
+                                <input type="checkbox" name="availability" value="weekend">
+                                <span>Weekend Available</span>
+                            </label>
+                            <label class="availability-option">
+                                <input type="checkbox" name="availability" value="emergency">
+                                <span>Emergency Service</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Verified Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Verification</h4>
+                        <label class="verification-option">
+                            <input type="checkbox" name="verified" value="true">
+                            <span>Verified Professionals Only</span>
+                        </label>
+                    </div>
+                </aside>
+
+                <!-- Services Content -->
+                <div class="services-content">
+                    <!-- Sort Bar -->
+                    <div class="sort-bar">
+                        <div class="results-count">
+                            Showing <strong>127 results</strong>
+                        </div>
+                        <div class="sort-controls">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select" class="sort-select">
+                                <option value="recommended">Recommended</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="distance">Nearest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Services Grid -->
+                    <div class="services-grid" id="services-grid">
+                        <!-- Service Card 1 -->
+                        <div class="provider-card">
+                            <div class="provider-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&h=400&fit=crop');">
+                                <div class="verified-badge">✓ Verified</div>
+                            </div>
+                            <div class="provider-content">
+                                <div class="provider-header">
+                                    <h3 class="provider-name">Mike's Plumbing Services</h3>
+                                    <div class="provider-rating">
+                                        <span class="rating-stars">⭐ 4.9</span>
+                                        <span class="rating-count">(127)</span>
+                                    </div>
+                                </div>
+                                <p class="provider-specialty">Expert in pipe repairs & installations</p>
+                                <div class="provider-meta">
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        2.5 km away
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        10+ years exp
+                                    </span>
+                                </div>
+                                <div class="provider-footer">
+                                    <div class="provider-price">
+                                        <span class="price-label">Starting at</span>
+                                        <span class="price-value">$50/hr</span>
+                                    </div>
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 2 -->
+                        <div class="provider-card">
+                            <div class="provider-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop');">
+                                <div class="verified-badge">✓ Verified</div>
+                                <div class="available-badge">Available Today</div>
+                            </div>
+                            <div class="provider-content">
+                                <div class="provider-header">
+                                    <h3 class="provider-name">QuickFix Plumbing</h3>
+                                    <div class="provider-rating">
+                                        <span class="rating-stars">⭐ 4.8</span>
+                                        <span class="rating-count">(89)</span>
+                                    </div>
+                                </div>
+                                <p class="provider-specialty">24/7 Emergency plumbing services</p>
+                                <div class="provider-meta">
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        1.8 km away
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        8 years exp
+                                    </span>
+                                </div>
+                                <div class="provider-footer">
+                                    <div class="provider-price">
+                                        <span class="price-label">Starting at</span>
+                                        <span class="price-value">$45/hr</span>
+                                    </div>
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 3 -->
+                        <div class="provider-card">
+                            <div class="provider-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&h=400&fit=crop');">
+                                <div class="verified-badge">✓ Verified</div>
+                            </div>
+                            <div class="provider-content">
+                                <div class="provider-header">
+                                    <h3 class="provider-name">Pro Plumbing Solutions</h3>
+                                    <div class="provider-rating">
+                                        <span class="rating-stars">⭐ 5.0</span>
+                                        <span class="rating-count">(45)</span>
+                                    </div>
+                                </div>
+                                <p class="provider-specialty">Residential & commercial plumbing</p>
+                                <div class="provider-meta">
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        3.2 km away
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        15+ years exp
+                                    </span>
+                                </div>
+                                <div class="provider-footer">
+                                    <div class="provider-price">
+                                        <span class="price-label">Starting at</span>
+                                        <span class="price-value">$60/hr</span>
+                                    </div>
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 4 -->
+                        <div class="provider-card">
+                            <div class="provider-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop');">
+                            </div>
+                            <div class="provider-content">
+                                <div class="provider-header">
+                                    <h3 class="provider-name">Reliable Plumbers Co.</h3>
+                                    <div class="provider-rating">
+                                        <span class="rating-stars">⭐ 4.7</span>
+                                        <span class="rating-count">(63)</span>
+                                    </div>
+                                </div>
+                                <p class="provider-specialty">Leak detection & water heater repair</p>
+                                <div class="provider-meta">
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        4.1 km away
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        7 years exp
+                                    </span>
+                                </div>
+                                <div class="provider-footer">
+                                    <div class="provider-price">
+                                        <span class="price-label">Starting at</span>
+                                        <span class="price-value">$48/hr</span>
+                                    </div>
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 5 -->
+                        <div class="provider-card">
+                            <div class="provider-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&h=400&fit=crop');">
+                                <div class="verified-badge">✓ Verified</div>
+                            </div>
+                            <div class="provider-content">
+                                <div class="provider-header">
+                                    <h3 class="provider-name">Expert Drain Services</h3>
+                                    <div class="provider-rating">
+                                        <span class="rating-stars">⭐ 4.6</span>
+                                        <span class="rating-count">(91)</span>
+                                    </div>
+                                </div>
+                                <p class="provider-specialty">Drain cleaning & sewer line repair</p>
+                                <div class="provider-meta">
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        2.9 km away
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        12 years exp
+                                    </span>
+                                </div>
+                                <div class="provider-footer">
+                                    <div class="provider-price">
+                                        <span class="price-label">Starting at</span>
+                                        <span class="price-value">$55/hr</span>
+                                    </div>
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Card 6 -->
+                        <div class="provider-card">
+                            <div class="provider-image"
+                                style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop');">
+                                <div class="available-badge">Available Today</div>
+                            </div>
+                            <div class="provider-content">
+                                <div class="provider-header">
+                                    <h3 class="provider-name">AllDay Plumbing</h3>
+                                    <div class="provider-rating">
+                                        <span class="rating-stars">⭐ 4.9</span>
+                                        <span class="rating-count">(112)</span>
+                                    </div>
+                                </div>
+                                <p class="provider-specialty">Same-day service guaranteed</p>
+                                <div class="provider-meta">
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        1.5 km away
+                                    </span>
+                                    <span class="meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        9 years exp
+                                    </span>
+                                </div>
+                                <div class="provider-footer">
+                                    <div class="provider-price">
+                                        <span class="price-label">Starting at</span>
+                                        <span class="price-value">$52/hr</span>
+                                    </div>
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map View (Hidden by default) -->
+                    <div class="map-view hidden" id="map-view">
+                        <div id="google-map" class="google-map">
+                            <!-- Google Maps will be loaded here -->
+                            <div class="map-placeholder">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <p>Map view will be integrated with Google Maps API</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-btn" disabled>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                            Previous
+                        </button>
+                        <div class="page-numbers">
+                            <button class="page-number active">1</button>
+                            <button class="page-number">2</button>
+                            <button class="page-number">3</button>
+                            <span class="page-dots">...</span>
+                            <button class="page-number">12</button>
+                        </div>
+                        <button class="page-btn">
+                            Next
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Leaflet JS (Free Open Source Maps) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/config.js"></script>
+    <script src="js/services.js"></script>
+</body>
+
+</html>
