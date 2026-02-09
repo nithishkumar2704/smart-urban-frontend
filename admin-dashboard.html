@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Smart Urban Service Locator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+
+<body class="admin-dashboard-page">
+    <!-- Navigation Header -->
+    <header class="dashboard-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="header-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <span class="logo-text">Smart Urban Admin</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="header-search">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search users, providers...">
+                </div>
+            </div>
+
+            <!-- User Menu -->
+            <div class="header-user">
+                <button class="notification-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">8</span>
+                </button>
+
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=ef4444&color=fff" alt="Admin"
+                        class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">Admin Dashboard 🎯</h1>
+                    <p class="welcome-subtitle">Platform overview and management</p>
+                </div>
+                <div class="admin-actions">
+                    <button class="admin-action-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                        Export Report
+                    </button>
+                    <button class="admin-action-btn primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M12 1v6m0 6v6m5.196-13.196l-4.243 4.243m0 6.364l4.243 4.243M1 12h6m6 0h6m-13.196 5.196l4.243-4.243m0-6.364l-4.243-4.243">
+                            </path>
+                        </svg>
+                        Settings
+                    </button>
+                </div>
+            </div>
+
+            <!-- Analytics Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon users">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">2,543</h3>
+                        <p class="stat-label">Total Users</p>
+                        <span class="stat-change positive">+12% this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon providers">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">487</h3>
+                        <p class="stat-label">Service Providers</p>
+                        <span class="stat-change positive">+8% this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon bookings">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">8,234</h3>
+                        <p class="stat-label">Total Bookings</p>
+                        <span class="stat-change positive">+24% this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon revenue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">$124,500</h3>
+                        <p class="stat-label">Total Revenue</p>
+                        <span class="stat-change positive">+18% this month</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- User Management -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2 class="section-title">User Management</h2>
+                            <div class="section-controls">
+                                <select class="filter-select">
+                                    <option>All Users</option>
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+                                    <option>Suspended</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Joined</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <img src="https://ui-avatars.com/api/?name=Sarah+Miller&background=3b82f6&color=fff"
+                                                    alt="Sarah Miller">
+                                                <span>Sarah Miller</span>
+                                            </div>
+                                        </td>
+                                        <td>sarah.m@example.com</td>
+                                        <td><span class="role-badge user">User</span></td>
+                                        <td>Jan 15, 2026</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <button class="table-action-btn" title="View">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                        <circle cx="12" cy="12" r="3"></circle>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn" title="Edit">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7">
+                                                        </path>
+                                                        <path
+                                                            d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn delete" title="Delete">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path
+                                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <img src="https://ui-avatars.com/api/?name=Mike+Johnson&background=667eea&color=fff"
+                                                    alt="Mike Johnson">
+                                                <span>Mike Johnson</span>
+                                            </div>
+                                        </td>
+                                        <td>mike.j@example.com</td>
+                                        <td><span class="role-badge provider">Provider</span></td>
+                                        <td>Dec 20, 2025</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <button class="table-action-btn" title="View">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                        <circle cx="12" cy="12" r="3"></circle>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn" title="Edit">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7">
+                                                        </path>
+                                                        <path
+                                                            d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn delete" title="Delete">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path
+                                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <img src="https://ui-avatars.com/api/?name=John+Smith&background=10b981&color=fff"
+                                                    alt="John Smith">
+                                                <span>John Smith</span>
+                                            </div>
+                                        </td>
+                                        <td>john.s@example.com</td>
+                                        <td><span class="role-badge user">User</span></td>
+                                        <td>Jan 28, 2026</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <button class="table-action-btn" title="View">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                        <circle cx="12" cy="12" r="3"></circle>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn" title="Edit">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7">
+                                                        </path>
+                                                        <path
+                                                            d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn delete" title="Delete">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path
+                                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <img src="https://ui-avatars.com/api/?name=Emily+Davis&background=f59e0b&color=fff"
+                                                    alt="Emily Davis">
+                                                <span>Emily Davis</span>
+                                            </div>
+                                        </td>
+                                        <td>emily.d@example.com</td>
+                                        <td><span class="role-badge user">User</span></td>
+                                        <td>Feb 1, 2026</td>
+                                        <td><span class="status-badge inactive">Inactive</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <button class="table-action-btn" title="View">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                        <circle cx="12" cy="12" r="3"></circle>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn" title="Edit">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path
+                                                            d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7">
+                                                        </path>
+                                                        <path
+                                                            d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <button class="table-action-btn delete" title="Delete">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                                        <path
+                                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Revenue Chart -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Revenue Overview</h2>
+                            <select class="period-select">
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                                <option>This Year</option>
+                            </select>
+                        </div>
+
+                        <div class="revenue-chart">
+                            <svg width="100%" height="300" viewBox="0 0 800 300">
+                                <!-- Grid lines -->
+                                <line x1="50" y1="250" x2="750" y2="250" stroke="#e2e8f0" stroke-width="1" />
+                                <line x1="50" y1="200" x2="750" y2="200" stroke="#e2e8f0" stroke-width="1" />
+                                <line x1="50" y1="150" x2="750" y2="150" stroke="#e2e8f0" stroke-width="1" />
+                                <line x1="50" y1="100" x2="750" y2="100" stroke="#e2e8f0" stroke-width="1" />
+                                <line x1="50" y1="50" x2="750" y2="50" stroke="#e2e8f0" stroke-width="1" />
+
+                                <!-- Line chart -->
+                                <polyline points="50,180 150,160 250,140 350,120 450,100 550,90 650,70 750,50"
+                                    fill="none" stroke="url(#gradient)" stroke-width="3" />
+
+                                <!-- Area fill -->
+                                <polygon
+                                    points="50,180 150,160 250,140 350,120 450,100 550,90 650,70 750,50 750,250 50,250"
+                                    fill="url(#areaGradient)" opacity="0.3" />
+
+                                <!-- Data points -->
+                                <circle cx="50" cy="180" r="5" fill="#667eea" />
+                                <circle cx="150" cy="160" r="5" fill="#667eea" />
+                                <circle cx="250" cy="140" r="5" fill="#667eea" />
+                                <circle cx="350" cy="120" r="5" fill="#667eea" />
+                                <circle cx="450" cy="100" r="5" fill="#667eea" />
+                                <circle cx="550" cy="90" r="5" fill="#667eea" />
+                                <circle cx="650" cy="70" r="5" fill="#667eea" />
+                                <circle cx="750" cy="50" r="5" fill="#764ba2" />
+
+                                <!-- Labels -->
+                                <text x="50" y="270" text-anchor="middle" font-size="12" fill="#64748b">Mon</text>
+                                <text x="150" y="270" text-anchor="middle" font-size="12" fill="#64748b">Tue</text>
+                                <text x="250" y="270" text-anchor="middle" font-size="12" fill="#64748b">Wed</text>
+                                <text x="350" y="270" text-anchor="middle" font-size="12" fill="#64748b">Thu</text>
+                                <text x="450" y="270" text-anchor="middle" font-size="12" fill="#64748b">Fri</text>
+                                <text x="550" y="270" text-anchor="middle" font-size="12" fill="#64748b">Sat</text>
+                                <text x="650" y="270" text-anchor="middle" font-size="12" fill="#64748b">Sun</text>
+
+                                <!-- Gradients -->
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                    </linearGradient>
+                                    <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.5" />
+                                        <stop offset="100%" style="stop-color:#667eea;stop-opacity:0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <!-- Provider Verification Queue -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Pending Verifications</h2>
+                            <span class="section-badge">5 pending</span>
+                        </div>
+
+                        <div class="verification-list">
+                            <div class="verification-item">
+                                <div class="verification-header">
+                                    <img src="https://ui-avatars.com/api/?name=Tom+Wilson&background=8b5cf6&color=fff"
+                                        alt="Tom Wilson">
+                                    <div class="verification-info">
+                                        <h4>Tom Wilson</h4>
+                                        <p>Electrician</p>
+                                    </div>
+                                </div>
+                                <div class="verification-actions">
+                                    <button class="verify-btn approve">Approve</button>
+                                    <button class="verify-btn reject">Reject</button>
+                                </div>
+                            </div>
+
+                            <div class="verification-item">
+                                <div class="verification-header">
+                                    <img src="https://ui-avatars.com/api/?name=Lisa+Brown&background=ec4899&color=fff"
+                                        alt="Lisa Brown">
+                                    <div class="verification-info">
+                                        <h4>Lisa Brown</h4>
+                                        <p>House Cleaner</p>
+                                    </div>
+                                </div>
+                                <div class="verification-actions">
+                                    <button class="verify-btn approve">Approve</button>
+                                    <button class="verify-btn reject">Reject</button>
+                                </div>
+                            </div>
+
+                            <div class="verification-item">
+                                <div class="verification-header">
+                                    <img src="https://ui-avatars.com/api/?name=David+Lee&background=06b6d4&color=fff"
+                                        alt="David Lee">
+                                    <div class="verification-info">
+                                        <h4>David Lee</h4>
+                                        <p>Carpenter</p>
+                                    </div>
+                                </div>
+                                <div class="verification-actions">
+                                    <button class="verify-btn approve">Approve</button>
+                                    <button class="verify-btn reject">Reject</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Recent Activity -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Recent Activity</h2>
+                            <a href="#" class="section-link">View All</a>
+                        </div>
+
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-icon new-user">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="8.5" cy="7" r="4"></circle>
+                                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                                    </svg>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>New user registered</strong></p>
+                                    <span class="activity-time">2 minutes ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon booking">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>New booking created</strong></p>
+                                    <span class="activity-time">15 minutes ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon provider">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Provider verified</strong></p>
+                                    <span class="activity-time">1 hour ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon payment">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Payment received</strong></p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon review">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>New review posted</strong></p>
+                                    <span class="activity-time">3 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Quick Stats -->
+                    <section class="dashboard-section">
+                        <h2 class="section-title">Quick Stats</h2>
+                        <div class="quick-stats">
+                            <div class="quick-stat-item">
+                                <span class="quick-stat-label">Active Bookings</span>
+                                <span class="quick-stat-value">234</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <span class="quick-stat-label">Pending Reviews</span>
+                                <span class="quick-stat-value">45</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <span class="quick-stat-label">Support Tickets</span>
+                                <span class="quick-stat-value">12</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <span class="quick-stat-label">System Health</span>
+                                <span class="quick-stat-value health">98%</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Urban Service Locator - Services in Any Location</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Globe Intro Section -->
+    <section id="intro-section" class="intro-section">
+        <div id="globe-container"></div>
+
+        <div id="intro-text" class="intro-text hidden">
+            <h1 class="intro-title">Smart Urban Service Locator</h1>
+            <p class="intro-subtitle">Services in Any Location</p>
+        </div>
+    </section>
+
+    <!-- Login Selection Section -->
+    <section id="login-selection" class="login-selection hidden">
+        <div class="container">
+            <!-- App Branding -->
+            <div class="app-branding">
+                <h1 class="app-title">Smart Urban Service Locator</h1>
+                <p class="app-tagline">Services in Any Location</p>
+            </div>
+
+            <h2 class="section-title">Choose Your Role</h2>
+            <p class="section-subtitle">Select how you'd like to access the platform</p>
+
+            <div class="login-grid">
+                <!-- Service Provider Card -->
+                <div class="login-card" data-role="provider">
+                    <div class="card-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Service Provider</h3>
+                    <p class="card-description">List and manage your services to reach more customers</p>
+                    <a href="service-provider.html" class="card-button provider-btn">Login</a>
+                </div>
+
+                <!-- Admin Card -->
+                <div class="login-card" data-role="admin">
+                    <div class="card-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Admin</h3>
+                    <p class="card-description">Manage platform, users, and service listings</p>
+                    <a href="admin.html" class="card-button admin-btn">Login</a>
+                </div>
+
+                <!-- User Card -->
+                <div class="login-card" data-role="user">
+                    <div class="card-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">User</h3>
+                    <p class="card-description">Find and access services near your location</p>
+                    <a href="user.html" class="card-button user-btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/config.js"></script>
+    <script src="js/globe.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

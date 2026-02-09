@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smart Urban Service Locator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body class="dashboard-page">
+    <!-- Navigation Header -->
+    <header class="dashboard-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="header-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <span class="logo-text">Smart Urban</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="header-search">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search for services...">
+                </div>
+            </div>
+
+            <!-- User Menu -->
+            <div class="header-user">
+                <button class="notification-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </button>
+
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=667eea&color=fff" alt="User"
+                        class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">User</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="dashboard-container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Find Services Near You</h1>
+                    <p class="hero-subtitle">Discover trusted professionals for all your needs</p>
+                </div>
+
+                <!-- Location Search -->
+                <div class="location-search">
+                    <div class="location-input-wrapper">
+                        <svg class="location-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <input type="text" class="location-input" placeholder="Enter your location...">
+                        <button class="detect-location-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Detect
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service Categories -->
+            <section class="categories-section">
+                <div class="section-header">
+                    <h2 class="section-title">Browse Services</h2>
+                    <a href="#" class="view-all-link">View All →</a>
+                </div>
+
+                <div class="categories-grid">
+                    <!-- Plumber -->
+                    <div class="category-card" data-category="plumber">
+                        <div class="category-icon plumber-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Plumber</h3>
+                        <p class="category-count">120+ available</p>
+                    </div>
+
+                    <!-- Electrician -->
+                    <div class="category-card" data-category="electrician">
+                        <div class="category-icon electrician-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Electrician</h3>
+                        <p class="category-count">95+ available</p>
+                    </div>
+
+                    <!-- Painter -->
+                    <div class="category-card" data-category="painter">
+                        <div class="category-icon painter-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Painter</h3>
+                        <p class="category-count">80+ available</p>
+                    </div>
+
+                    <!-- Cleaner -->
+                    <div class="category-card" data-category="cleaner">
+                        <div class="category-icon cleaner-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Cleaner</h3>
+                        <p class="category-count">110+ available</p>
+                    </div>
+
+                    <!-- Carpenter -->
+                    <div class="category-card" data-category="carpenter">
+                        <div class="category-icon carpenter-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Carpenter</h3>
+                        <p class="category-count">70+ available</p>
+                    </div>
+
+                    <!-- Gardener -->
+                    <div class="category-card" data-category="gardener">
+                        <div class="category-icon gardener-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                                <path d="M12 12v10"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Gardener</h3>
+                        <p class="category-count">60+ available</p>
+                    </div>
+
+                    <!-- AC Repair -->
+                    <div class="category-card" data-category="ac-repair">
+                        <div class="category-icon ac-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M8 2v4M16 2v4"></path>
+                                <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">AC Repair</h3>
+                        <p class="category-count">50+ available</p>
+                    </div>
+
+                    <!-- Appliance Repair -->
+                    <div class="category-card" data-category="appliance">
+                        <div class="category-icon appliance-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Appliance Repair</h3>
+                        <p class="category-count">65+ available</p>
+                    </div>
+
+                    <!-- Pest Control -->
+                    <div class="category-card" data-category="pest-control">
+                        <div class="category-icon pest-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Pest Control</h3>
+                        <p class="category-count">40+ available</p>
+                    </div>
+
+                    <!-- Moving Services -->
+                    <div class="category-card" data-category="moving">
+                        <div class="category-icon moving-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Moving Services</h3>
+                        <p class="category-count">35+ available</p>
+                    </div>
+
+                    <!-- Locksmith -->
+                    <div class="category-card" data-category="locksmith">
+                        <div class="category-icon locksmith-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Locksmith</h3>
+                        <p class="category-count">45+ available</p>
+                    </div>
+
+                    <!-- Home Tutor -->
+                    <div class="category-card" data-category="tutor">
+                        <div class="category-icon tutor-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Home Tutor</h3>
+                        <p class="category-count">90+ available</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Services -->
+            <section class="popular-section">
+                <div class="section-header">
+                    <h2 class="section-title">Popular Services</h2>
+                    <a href="#" class="view-all-link">View All →</a>
+                </div>
+
+                <div class="popular-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-badge">⭐ 4.9</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Professional Plumbing Services</h3>
+                            <p class="service-provider">By Mike's Plumbing</p>
+                            <div class="service-meta">
+                                <span class="service-location">📍 2.5 km away</span>
+                                <span class="service-price">$50/hr</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-badge">⭐ 4.8</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Expert Electrical Repairs</h3>
+                            <p class="service-provider">By Spark Electric</p>
+                            <div class="service-meta">
+                                <span class="service-location">📍 1.8 km away</span>
+                                <span class="service-price">$60/hr</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-badge">⭐ 5.0</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Deep Cleaning Services</h3>
+                            <p class="service-provider">By CleanPro</p>
+                            <div class="service-meta">
+                                <span class="service-location">📍 3.2 km away</span>
+                                <span class="service-price">$40/hr</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-badge">⭐ 4.7</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Interior & Exterior Painting</h3>
+                            <p class="service-provider">By ColorWorks</p>
+                            <div class="service-meta">
+                                <span class="service-location">📍 4.1 km away</span>
+                                <span class="service-price">$45/hr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

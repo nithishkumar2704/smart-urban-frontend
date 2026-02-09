@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Smart Urban Service Locator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login-enhanced.css">
+</head>
+
+<body class="login-page">
+    <div class="login-container">
+        <!-- Left Side - Visual/Illustration -->
+        <div class="login-visual admin-visual">
+            <!-- Animated Particles -->
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <!-- Visual Content -->
+            <div class="visual-content">
+                <div class="visual-icon">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h2 class="visual-title">Admin Portal</h2>
+                <p class="visual-subtitle">Manage the platform, approve providers, and monitor all activities.</p>
+            </div>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div class="login-form-section">
+            <div class="login-box">
+                <!-- Back Link -->
+                <a href="index.html#login-selection" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Back to Role Selection
+                </a>
+
+                <!-- Header -->
+                <div class="login-header">
+                    <div class="brand-name">Smart Urban Service Locator</div>
+                    <h1 class="login-title">Admin Login</h1>
+                    <p class="login-subtitle">Access platform administration panel</p>
+                </div>
+
+                <!-- Login Form -->
+                <form class="login-form" id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="email">Admin Email</label>
+                        <input type="email" id="email" name="email" placeholder="admin@smarturban.com" required
+                            autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter admin password" required
+                            autocomplete="current-password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="2fa">Two-Factor Authentication Code (Optional)</label>
+                        <input type="text" id="2fa" name="2fa" placeholder="Enter 6-digit code" pattern="[0-9]{6}"
+                            maxlength="6">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            <span>Remember this device</span>
+                        </label>
+                        <a href="#" class="forgot-link">Need help?</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn admin-btn">
+                        Sign In Securely
+                    </button>
+                </form>
+
+                <!-- Footer -->
+                <div class="login-footer">
+                    <p>🔒 Secure admin access only | <a href="#" class="signup-link">Contact support</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
